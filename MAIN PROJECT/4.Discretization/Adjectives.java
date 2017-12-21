@@ -1,0 +1,80 @@
+import java.util.*;
+import java.io.*;
+
+public class Adjectives
+{
+public static void main(String[] args) throws IOException
+{
+Scanner keyboard = new Scanner(System.in);
+System.out.print("Enter a file name: ");
+String filename = keyboard.nextLine();
+
+File file1 = new File(filename);
+Scanner inputFile = new Scanner(file1);
+
+int i=0,n;
+String[] arr = new String[10000];
+   
+while (inputFile.hasNext())
+{
+String line = inputFile.nextLine(); 
+line = line.trim();  
+for (String retval: line.split(" "))
+{
+
+arr[i]=retval;
+//System.out.println(arr[i]);
+i++;
+}
+}
+System.out.println("Array Size:"+i);
+n=i;
+
+for(i=0;i<n;i++)
+{
+if((arr[i].endsWith("_NN")) || (arr[i].endsWith("_RB")) || (arr[i].endsWith("_NNS")) || (arr[i].endsWith("_VBZ")) || (arr[i].endsWith("_VBG")) || (arr[i].endsWith("_VBD")) || (arr[i].endsWith("_VBP")) || (arr[i].endsWith("_CC")) || (arr[i].endsWith("_LS")) || (arr[i].endsWith("_,")) || (arr[i].endsWith("!_.")) || (arr[i].endsWith("_:")) )
+arr[i]="";
+else if(arr[i].endsWith("_."))
+arr[i]=".";
+else if(arr[i].endsWith("_CD"))
+arr[i]=arr[i].replaceFirst("_CD", "");
+else if(arr[i].endsWith("_JJ"))
+arr[i]=arr[i].replaceFirst("_JJ", "");
+else if(arr[i].endsWith("_JJS"))
+arr[i]=arr[i].replaceFirst("_JJS", "");
+}
+
+try 
+{
+File file = new File("Adjectives.txt");
+if (!file.exists()) 
+{
+file.createNewFile();
+}
+FileWriter fw = new FileWriter(file.getAbsoluteFile());
+BufferedWriter bw = new BufferedWriter(fw);
+	
+for(i=0;i<n;i++)
+{
+if(!(arr[i].equals("")))
+{
+bw.write(arr[i]);
+bw.write(" ");
+if(arr[i].equals("."))
+{
+String newLine = System.getProperty("line.separator");
+bw.write(newLine);
+}
+}
+}
+
+bw.close();
+} 
+catch (IOException e) 
+{
+e.printStackTrace();
+}
+inputFile.close();
+System.out.println("Adjectives.txt Created!!....");
+}
+}

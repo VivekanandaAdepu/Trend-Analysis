@@ -1,0 +1,61 @@
+1 price . 
+2 audio output price bluetooth . 
+3 bluetooth music price . 
+4 bluetooth music   price . 
+5  price  . 
+6  music price  . 
+7 price output  . 
+8 phone output . 
+9   music . 
+10 music size . 
+11    . 
+12  audio bluetooth . 
+13 audio features . 
+14   . 
+15  good . 
+16 music features . 
+17 audio . 
+18 audio . 
+19  feature . 
+20 camera display clarity phone size . 
+21 size camera display . 
+22 camera pictures pictures . 
+23  clarity display . 
+24 camera flash . 
+25 camera flash  . 
+26 camera flash . 
+27 camera   audio . 
+28 camera pictures . 
+29 camera  . 
+30 camera pictures . 
+31 battery  memory good . 
+32 battery memory  . 
+33 battery    sim    . 
+34  life sim feature clarity . 
+35 memory battery . 
+36 battery life memory . 
+37 display battery . 
+38  battery life  sim card feature . 
+39 sim card feature battery . 
+40 battery sim card  . 
+41 clarity sim card  . 
+42 sim   . 
+43 battery . 
+44 battery . 
+45 display sim . 
+46  . 
+47  . 
+48   sim  . 
+49 phone price . 
+50  phone . 
+51 price features . 
+52 good . 
+53 size . 
+54 size  . 
+55 sim  . 
+56 sim  . 
+57  size  . 
+58   display . 
+59 size . 
+60 size . 
+61
